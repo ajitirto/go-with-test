@@ -13,6 +13,10 @@ build:
 ## Run all tests
 test:
 	@echo "Running all tests..."
+	$(GO) test  $(PKG) -v 
+
+test-all:
+	@echo "Running all tests..."
 	$(GO) test  $(PKG) -v -bench=. -benchmem
 
 ## Clean up build artifacts and test cache
